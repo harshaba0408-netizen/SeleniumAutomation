@@ -37,13 +37,17 @@ public class App {
 
             Thread.sleep(3000);
 
-            System.out.println("Login Successful");
-            System.out.println("Current URL: " + driver.getCurrentUrl());
+            String currentUrl = driver.getCurrentUrl();
+
+            if (currentUrl.equals("https://www.saucedemo.com/inventory.html")) {
+                System.out.println("Login Successful");
+                System.out.println("Current URL: " + currentUrl);
+            } else {
+                System.out.println("Login Failed");
+            }
 
         } finally {
-
             driver.quit();
-
         }
     }
 }
