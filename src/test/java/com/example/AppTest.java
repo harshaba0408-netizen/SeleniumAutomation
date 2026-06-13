@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class App {
+public class AppTest {
 
     @Test
     public void loginTest() throws InterruptedException {
