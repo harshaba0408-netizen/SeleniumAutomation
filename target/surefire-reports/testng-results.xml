@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-14T11:55:58 IST" name="Surefire suite" finished-at="2026-06-14T11:56:08 IST" duration-ms="9699">
+  <suite started-at="2026-06-14T12:11:56 IST" name="Surefire suite" finished-at="2026-06-14T12:12:05 IST" duration-ms="8970">
     <groups>
     </groups>
-    <test started-at="2026-06-14T11:55:58 IST" name="Surefire test" finished-at="2026-06-14T11:56:08 IST" duration-ms="9699">
+    <test started-at="2026-06-14T12:11:56 IST" name="Surefire test" finished-at="2026-06-14T12:12:05 IST" duration-ms="8970">
       <class name="com.example.AppTest">
-        <test-method signature="loginTest()[pri:0, instance:com.example.AppTest@3d121db3]" started-at="2026-06-14T11:55:58 IST" name="loginTest" finished-at="2026-06-14T11:56:08 IST" duration-ms="9594" status="PASS">
+        <test-method signature="loginTest()[pri:0, instance:com.example.AppTest@3d121db3]" started-at="2026-06-14T12:11:56 IST" name="loginTest" finished-at="2026-06-14T12:12:05 IST" duration-ms="8727" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
