@@ -13,16 +13,20 @@ public class AppTest {
     @Test
     public void loginTest() throws InterruptedException {
 
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver()
+                        .browserVersion("146")
+                        .setup();
 
         ChromeOptions options = new ChromeOptions();
 
-options.addArguments("--headless");
-options.addArguments("--no-sandbox");
-options.addArguments("--disable-dev-shm-usage");
-options.addArguments("--remote-allow-origins=*");
-options.addArguments("--disable-gpu");
-options.addArguments("--window-size=1920,1080");
+        options.addArguments("--headless");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--remote-allow-origins=*");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--window-size=1920,1080");
+
+        WebDriver driver = new ChromeDriver(options);
 
         try {
 
@@ -51,4 +55,3 @@ options.addArguments("--window-size=1920,1080");
         }
     }
 }
-
