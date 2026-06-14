@@ -4,18 +4,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class AppTest {
+public class App {
 
-    @Test
-    public void loginTest() throws InterruptedException {
+    public static void main(String[] args) {
 
+        // Automatically manages matching ChromeDriver
         WebDriverManager.chromedriver().setup();
 
+        // Chrome options for Jenkins/Linux
         ChromeOptions options = new ChromeOptions();
+
         options.addArguments("--headless=new");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
@@ -25,28 +26,23 @@ public class AppTest {
         try {
 
             driver.get("https://www.saucedemo.com/");
+            driver.manage().window().maximize();
 
-            driver.findElement(By.id("user-name"))
-                    .sendKeys("standard_user");
+            driver.findElement(By.id("user-name")).sendKeys("standard_user");
 
-            driver.findElement(By.id("password"))
-                    .sendKeys("secret_sauce");
+            driver.findElement(By.id("password")).sendKeys("secret_sauce");
 
-            driver.findElement(By.id("login-button"))
-                    .click();
-
-            Thread.sleep(2000);
-
-            String currentUrl = driver.getCurrentUrl();
+            driver.findElement(By.id("login-button")).click();
 
             System.out.println("Login Successful");
-            System.out.println("Current URL: " + currentUrl);
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
 
         } finally {
 
             driver.quit();
-
         }
     }
 }
-
